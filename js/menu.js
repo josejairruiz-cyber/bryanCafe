@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mealsBody = document.getElementById('meals-body');
         const items = xml.querySelectorAll('Meals Item');
 
-        items.forEach(item => {
+        items.forEach((item, index) => {
             const name = item.querySelector('Name').textContent;
             const price = item.querySelector('Price').textContent;
             const description = item.querySelector('Description') ? item.querySelector('Description').textContent : '';
@@ -27,8 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const tr = document.createElement('tr');
             
+            const catDisplay = index === 0 ? `<strong>Meals</strong>` : '';
+
             tr.innerHTML = `
                 <td data-label="Image"><img src="Images/${image}" alt="${name}" style="max-width: 100px; height: auto; border-radius: 8px;"></td>
+                <td data-label="Category">${catDisplay}</td>
                 <td data-label="Item Name"><strong>${name}</strong></td>
                 <td data-label="Description">${description}</td>
                 <td data-label="Price" class="price">${price}</td>
@@ -52,10 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let priceDisplay = '';
                 const sizes = item.querySelectorAll('Size');
                 if (sizes.length > 0) {
-                    sizes.forEach(size => {
+                    sizes.forEach((size, i) => {
                         const sizeName = size.querySelector('Name').textContent;
                         const sizePrice = size.querySelector('Price').textContent;
-                        priceDisplay += `<div>${sizeName}: ${sizePrice}</div>`;
+                        const borderStyle = i < sizes.length - 1 ? 'border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 8px;' : '';
+                        priceDisplay += `<div style="${borderStyle}"><strong>${sizeName}:</strong><br>${sizePrice}</div>`;
                     });
                 } else {
                     const priceNode = item.querySelector('Price');
