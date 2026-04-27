@@ -22,11 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(item => {
             const name = item.querySelector('Name').textContent;
             const price = item.querySelector('Price').textContent;
-            const description = item.querySelector('Description').textContent;
+            const description = item.querySelector('Description') ? item.querySelector('Description').textContent : '';
+            const image = item.querySelector('Image') ? item.querySelector('Image').textContent : '';
 
             const tr = document.createElement('tr');
             
             tr.innerHTML = `
+                <td data-label="Image"><img src="Images/${image}" alt="${name}" style="max-width: 100px; height: auto; border-radius: 8px;"></td>
                 <td data-label="Item Name"><strong>${name}</strong></td>
                 <td data-label="Description">${description}</td>
                 <td data-label="Price" class="price">${price}</td>
@@ -45,8 +47,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             items.forEach((item, index) => {
                 const name = item.querySelector('Name').textContent;
-                const price = item.querySelector('Price').textContent;
-                const description = item.querySelector('Description').textContent;
+                
+                // Handle sizes or single price
+                let priceDisplay = '';
+                const sizes = item.querySelectorAll('Size');
+                if (sizes.length > 0) {
+                    sizes.forEach(size => {
+                        const sizeName = size.querySelector('Name').textContent;
+                        const sizePrice = size.querySelector('Price').textContent;
+                        priceDisplay += `<div>${sizeName}: ${sizePrice}</div>`;
+                    });
+                } else {
+                    const priceNode = item.querySelector('Price');
+                    if (priceNode) {
+                        priceDisplay = priceNode.textContent;
+                    }
+                }
+
+                const description = item.querySelector('Description') ? item.querySelector('Description').textContent : '';
+                const image = item.querySelector('Image') ? item.querySelector('Image').textContent : '';
 
                 const tr = document.createElement('tr');
                 
@@ -54,10 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const catDisplay = index === 0 ? `<strong>${categoryName}</strong>` : '';
 
                 tr.innerHTML = `
+                    <td data-label="Image"><img src="Images/${image}" alt="${name}" style="max-width: 100px; height: auto; border-radius: 8px;"></td>
                     <td data-label="Category">${catDisplay}</td>
                     <td data-label="Item Name"><strong>${name}</strong></td>
                     <td data-label="Description">${description}</td>
-                    <td data-label="Price" class="price">${price}</td>
+                    <td data-label="Price" class="price">${priceDisplay}</td>
                 `;
                 beveragesBody.appendChild(tr);
             });

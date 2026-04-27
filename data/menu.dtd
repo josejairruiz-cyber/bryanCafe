@@ -3,8 +3,9 @@
 <!ELEMENT Beverages (Category+)>
 <!ELEMENT Category (Item+)>
 <!ATTLIST Category name CDATA #REQUIRED>
-<!ELEMENT Item (Name, Price, Description, Image)>
+<!ELEMENT Item (Name, (Price | Size+), Description?, Image)>
 <!ELEMENT Name (#PCDATA)>
+<!ELEMENT Size (Name, Price)>
 <!ELEMENT Price (#PCDATA)>
 <!ELEMENT Description (#PCDATA)>
 <!ELEMENT Image (#PCDATA)>
