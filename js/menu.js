@@ -26,12 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const image = item.querySelector('Image') ? item.querySelector('Image').textContent : '';
 
             const tr = document.createElement('tr');
-            
-            const catDisplay = index === 0 ? `<strong>Meals</strong>` : '';
 
             tr.innerHTML = `
                 <td data-label="Image"><img src="Images/${image}" alt="${name}" style="max-width: 100px; height: auto; border-radius: 8px;"></td>
-                <td data-label="Category">${catDisplay}</td>
                 <td data-label="Item Name"><strong>${name}</strong></td>
                 <td data-label="Description">${description}</td>
                 <td data-label="Price" class="price">${price}</td>
@@ -48,7 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const categoryName = category.getAttribute('name');
             const items = category.querySelectorAll('Item');
 
-            items.forEach((item, index) => {
+            // Add subcategory title row
+            const titleTr = document.createElement('tr');
+            titleTr.innerHTML = `<td colspan="4" style="background-color: var(--secondary-color); color: var(--light-text); font-size: 1.2rem; font-weight: bold; text-align: center;">${categoryName}</td>`;
+            beveragesBody.appendChild(titleTr);
+
+            items.forEach((item) => {
                 const name = item.querySelector('Name').textContent;
                 
                 // Handle sizes or single price
@@ -72,13 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const image = item.querySelector('Image') ? item.querySelector('Image').textContent : '';
 
                 const tr = document.createElement('tr');
-                
-                // Only show category name on the first item of the category for better aesthetics
-                const catDisplay = index === 0 ? `<strong>${categoryName}</strong>` : '';
 
                 tr.innerHTML = `
                     <td data-label="Image"><img src="Images/${image}" alt="${name}" style="max-width: 100px; height: auto; border-radius: 8px;"></td>
-                    <td data-label="Category">${catDisplay}</td>
                     <td data-label="Item Name"><strong>${name}</strong></td>
                     <td data-label="Description">${description}</td>
                     <td data-label="Price" class="price">${priceDisplay}</td>
