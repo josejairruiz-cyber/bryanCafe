@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import letter, landscape
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 
-TARGET_DIR = "/Users/josejairruizsanchez/Desktop/ACBI IT COURSE /Assessment/Diploma of IT/Monthly Assessments/2026/Term_02/Bryan’s Café website/Bryan-s-Caf-website/Task C"
+TARGET_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def create_tree_structure_pdf():
     pdf_path = os.path.join(TARGET_DIR, "TaskC_TreeStructure.pdf")
@@ -166,8 +166,8 @@ def create_webdesign_pdf():
     draw_wireframe_box(c, 60, height - 230, (width - 120)/2 - 20, 30, "[Input: Last Name]")
     draw_wireframe_box(c, 60, height - 270, (width - 120)/2 - 20, 30, "[Input: Email]")
     draw_wireframe_box(c, 60, height - 310, (width - 120)/2 - 20, 30, "[Input: Subject]")
-    draw_wireframe_box(c, 60, height - 380, (width - 120)/2 - 20, 100, "[Textarea: Message]")
-    draw_wireframe_box(c, 60, height - 430, 100, 40, "[Submit Button]")
+    draw_wireframe_box(c, 60, height - 420, (width - 120)/2 - 20, 100, "[Textarea: Message]")
+    draw_wireframe_box(c, 60, height - 470, 100, 40, "[Submit Button]")
     
     draw_wireframe_box(c, 50 + (width - 120)/2 + 20, height - 480, (width - 120)/2, 350)
     c.drawString(60 + (width - 120)/2 + 20, height - 150, "Branch Locations:")
