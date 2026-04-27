@@ -165,7 +165,8 @@ def create_webdesign_pdf():
     draw_wireframe_box(c, 60, height - 190, (width - 120)/2 - 20, 30, "[Input: First Name]")
     draw_wireframe_box(c, 60, height - 230, (width - 120)/2 - 20, 30, "[Input: Last Name]")
     draw_wireframe_box(c, 60, height - 270, (width - 120)/2 - 20, 30, "[Input: Email]")
-    draw_wireframe_box(c, 60, height - 380, (width - 120)/2 - 20, 100, "[Textarea: Comments]")
+    draw_wireframe_box(c, 60, height - 310, (width - 120)/2 - 20, 30, "[Input: Subject]")
+    draw_wireframe_box(c, 60, height - 380, (width - 120)/2 - 20, 100, "[Textarea: Message]")
     draw_wireframe_box(c, 60, height - 430, 100, 40, "[Submit Button]")
     
     draw_wireframe_box(c, 50 + (width - 120)/2 + 20, height - 480, (width - 120)/2, 350)
