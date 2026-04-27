@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Branches SYSTEM "branches.dtd">
+<Branches>
+    <Branch>
+        <Name>Devonshire St Branch</Name>
+        <Address>123 Devonshire St, Surry Hills NSW 2010</Address>
+        <Contact>(02) 9876 5432</Contact>
+        <Hours>Mon-Sun: 6:30 AM - 4:00 PM</Hours>
+        <MapLink>https://maps.google.com/?q=Devonshire+St+Surry+Hills</MapLink>
+    </Branch>
+    <Branch>
+        <Name>Pitt St Branch</Name>
+        <Address>456 Pitt St, Sydney NSW 2000</Address>
+        <Contact>(02) 9123 4567</Contact>
+        <Hours>Mon-Fri: 6:00 AM - 5:00 PM, Sat-Sun: 7:00 AM - 3:00 PM</Hours>
+        <MapLink>https://maps.google.com/?q=Pitt+St+Sydney</MapLink>
+    </Branch>
+    <Branch>
+        <Name>Alfred St Branch</Name>
+        <Address>789 Alfred St, Circular Quay NSW 2000</Address>
+        <Contact>(02) 9988 7766</Contact>
+        <Hours>Mon-Sun: 7:00 AM - 6:00 PM</Hours>
+        <MapLink>https://maps.google.com/?q=Alfred+St+Circular+Quay</MapLink>
+    </Branch>
+</Branches>

@@ -1,0 +1,7 @@
+<!ELEMENT Branches (Branch+)>
+<!ELEMENT Branch (Name, Address, Contact, Hours, MapLink)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Contact (#PCDATA)>
+<!ELEMENT Hours (#PCDATA)>
+<!ELEMENT MapLink (#PCDATA)>

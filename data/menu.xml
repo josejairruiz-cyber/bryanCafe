@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Menu SYSTEM "menu.dtd">
+<Menu>
+    <Meals>
+        <Item>
+            <Name>Beetroot and Feta Salad</Name>
+            <Price>$15.00</Price>
+            <Description>Fresh organic beetroot, crumbled feta, walnuts, and balsamic glaze.</Description>
+            <Image>beetroot-salad.jpg</Image>
+        </Item>
+        <Item>
+            <Name>Sourdough Rye Sandwich</Name>
+            <Price>$18.00</Price>
+            <Description>Artisan sourdough rye with smoked turkey, avocado, and house mayo.</Description>
+            <Image>rye-sandwich.jpg</Image>
+        </Item>
+        <Item>
+            <Name>Spinach Pie and Salad</Name>
+            <Price>$20.00</Price>
+            <Description>Traditional Greek spanakopita served with a side of Mediterranean salad.</Description>
+            <Image>spinach-pie.jpg</Image>
+        </Item>
+        <Item>
+            <Name>Feta Pancakes with Salad</Name>
+            <Price>$19.50</Price>
+            <Description>Savory feta pancakes topped with microgreens and cherry tomatoes.</Description>
+            <Image>feta-pancakes.jpg</Image>
+        </Item>
+    </Meals>
+    <Beverages>
+        <Category name="Coffee &amp; Hot Chocolates">
+            <Item>
+                <Name>Cappuccino</Name>
+                <Price>$4.50</Price>
+                <Description>Rich espresso with velvety steamed milk and a deep layer of micro-foam.</Description>
+                <Image>cappuccino.jpg</Image>
+            </Item>
+            <Item>
+                <Name>Latte</Name>
+                <Price>$4.50</Price>
+                <Description>Smooth espresso mixed with steamed milk and a light layer of foam.</Description>
+                <Image>latte.jpg</Image>
+            </Item>
+            <Item>
+                <Name>Signature Hot Chocolate</Name>
+                <Price>$5.00</Price>
+                <Description>Rich, decadent melted cocoa served with steamed milk and marshmallows.</Description>
+                <Image>hot-chocolate.jpg</Image>
+            </Item>
+        </Category>
+        <Category name="Other Beverages">
+            <Item>
+                <Name>English Breakfast Tea</Name>
+                <Price>$4.00</Price>
+                <Description>A robust and full-bodied classic black tea.</Description>
+                <Image>tea.jpg</Image>
+            </Item>
+            <Item>
+                <Name>Fresh Orange Juice</Name>
+                <Price>$6.50</Price>
+                <Description>Freshly squeezed, 100% pure organic orange juice.</Description>
+                <Image>orange-juice.jpg</Image>
+            </Item>
+        </Category>
+    </Beverages>
+</Menu>
